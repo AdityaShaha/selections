@@ -17,15 +17,15 @@ var Print = new Array();
 
 for( var i in lines)
 {
-  if(lines[i].match(/<[a-zA-z]*\sclass="[a-zA-z]*\s*[a-zA-z]*">\s+[a-zA-z\s]+[!.]*\s+<[/a-zA-z]*>\r/g))
+  if(lines[i].match(/<[a-zA-z]*\sclass="[a-zA-z]*\s*[a-zA-z]*">\s*[a-zA-z\s@#$%*()_?{}!|.]+\s*<[/a-zA-z]*>\r/g))
     {
-       subline = lines[i].match(/>\s+[a-zA-z\s]+[!.]*\s+</g);
+       subline = lines[i].match(/>\s*[a-zA-z\s@#$%*()_?{}!|.]+\s*</g);
        //console.log(subline);
 
        for(var j in subline)
        {
-         if(subline[j].match(/[a-z\sA-z]+[!.]*/g) && subline[j].match(/[a-z\sA-z]+[!.]*/g)!=' ')
-          Print.push(subline[j].match(/[a-z\sA-z]+[!.]*/g));
+         if(subline[j].match(/[a-zA-z\s@#$%*()_?{}!|.]+/g) && subline[j].match(/[a-z\sA-z]+[!.]*/g)!=' ')
+          Print.push(subline[j].match(/[a-zA-z\s@#$%*()_?{}!|.]+/g));
        }
     }
 }
