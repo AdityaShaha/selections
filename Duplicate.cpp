@@ -4,6 +4,10 @@
 #define MAX 1000
 using namespace std;
 
+/* The time complexity of the Algorithm is nlog(n) is avg and Best case.In worst case it is n^2 because of Quicksort 
+and requires constant space O(1).
+However the time complexity in worst can be made nlog(n) by using MergeSort for Sorting Algorithm thus increasing the space complexity.
+*/
 int main()
 {
     int n,i,x;
